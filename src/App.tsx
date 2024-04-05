@@ -15,6 +15,16 @@ function printName(name: string){
   console.log(name);
 }
 
+type Person = {
+  name: string,
+  age: number,
+}
+
+interface Guy extends Person {
+  a: string,
+  b: number,
+}
+
 /*type Person = {
   name: string;
   age?: number; //? lo hace opcional
