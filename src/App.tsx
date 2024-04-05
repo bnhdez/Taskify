@@ -3,12 +3,17 @@ import './App.css';
 
 let name: string;
 let age: number | string;
-
-age = "twentytwo";
-
 let IsStudent: boolean;
 let hobbies: string[];
 let role: [number, string];
+
+let printName2: Function;
+
+let printName3: (name:string) => never;
+
+function printName(name: string){
+  console.log(name);
+}
 
 /*type Person = {
   name: string;
