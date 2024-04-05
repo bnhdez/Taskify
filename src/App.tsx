@@ -2,12 +2,15 @@ import React from 'react';
 import './App.css';
 
 let name: string;
-let age: number;
+let age: number | string;
+
+age = "twentytwo";
+
 let IsStudent: boolean;
 let hobbies: string[];
 let role: [number, string];
 
-type Person = {
+/*type Person = {
   name: string;
   age?: number; //? lo hace opcional
 };
@@ -15,7 +18,7 @@ type Person = {
 let person: Person = {
   name: "Boris",
   age: 22,
-};
+};*/
 
 function App() {
   return (
