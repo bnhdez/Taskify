@@ -3,6 +3,7 @@ import { Todo } from '../model';
 import { MdEdit } from "react-icons/md";
 import { RiDeleteBack2Fill } from "react-icons/ri";
 import { FaCheck } from "react-icons/fa6";
+import "./styles.css";
 
 type Props = {
     todo: Todo,
