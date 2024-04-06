@@ -7,9 +7,11 @@ let IsStudent: boolean;
 let hobbies: string[];
 let role: [number, string];
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">Hello world!</div>
+    <div className="App">
+      <span className="heading">Taskify</span>
+    </div>
   );
 }
 
