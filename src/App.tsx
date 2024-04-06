@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import InputField from './Components/InputField';
 
-let name: string;
-let age: number | string;
-let IsStudent: boolean;
-let hobbies: string[];
-let role: [number, string];
-
 const App: React.FC = () => {
+
+  const [todo, setTodo] = useState<string>("");
+
+  console.log(todo);
+
   return (
     <div className="App">
       <span className="heading">Taskify</span>
-      <InputField />
+      <InputField todo={todo} setTodo={setTodo}/>
     </div>
   );
 }
