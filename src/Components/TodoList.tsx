@@ -19,14 +19,18 @@ const TodoList:React.FC<Props> = ({
 }) => {
     return (
         <div className="container">
-            <Droppable droppableId='TodosList'>
+            <Droppable droppableId="TodosList">
                 {
                     (provided) => (
-                        <div className="todos" ref={provided.innerRef} {...provided.droppableProps}>
+                        <div 
+                        className="todos" 
+                        ref={provided.innerRef} 
+                        {...provided.droppableProps}>
                             <span className="todos__heading">Active Tasks</span>
                             {
-                                todos.map((todo) => (
+                                todos.map((todo, index) => (
                                     <SingleTodo
+                                        index={index}
                                         todo={todo}
                                         todos={todos}
                                         key={todo.id}
@@ -38,14 +42,18 @@ const TodoList:React.FC<Props> = ({
                     )
                 }
             </Droppable>
-            <Droppable droppableId='TodosRemove'>
+            <Droppable droppableId="TodosRemove">
                 {
                     (provided) => (
-                        <div className="todos remove" ref={provided.innerRef} {...provided.droppableProps}>
+                        <div 
+                        className="todos remove" 
+                        ref={provided.innerRef} 
+                        {...provided.droppableProps}>
                             <span className="todos__heading">Completed Tasks</span>
                             {
-                                completedTodos.map((todo) => (
+                                completedTodos.map((todo, index) => (
                                     <SingleTodo
+                                        index={index}
                                         todo={todo}
                                         todos={completedTodos}
                                         key={todo.id}
